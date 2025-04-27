@@ -7,6 +7,9 @@ const Chat = lazy(() => import('./pages/Chat'))
 const Group = lazy(() => import('./pages/Group'))
 
 const App = () => {
+
+  let user = true
+
   return (
     <BrowserRouter>
       <Routes>
