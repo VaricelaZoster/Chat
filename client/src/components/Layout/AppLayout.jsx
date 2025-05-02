@@ -10,7 +10,7 @@ const AppLayout = () =>(WrappedComponent) => {
             <Title/>
             <Header/>
 
-            <Grid container display={"flex"} flexDirection={"column"} height={"calc(100vh - 4px)"} paddingTop={"calc(0.5rem + 1px)"} >
+            <Grid container display={"flex"} flexDirection={"column"} height={"calc(100vh - 4px)"}>
                 <Grid 
                 item 
                 sm={4} 
@@ -22,7 +22,7 @@ const AppLayout = () =>(WrappedComponent) => {
                      >
                         First
                     </Grid>
-                <Grid item xs={12} sm={8} md={5} lg={7} height={"100%"}>
+                <Grid item bgcolor={"red"} xs={12} sm={8} md={5} lg={7} height={"100%"}>
                     <WrappedComponent {...props}/>
                 </Grid>
                 <Grid item md={4} lg={3} height={"100%"}
