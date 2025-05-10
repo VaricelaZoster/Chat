@@ -1,4 +1,4 @@
-import { AppBar, Box, IconButton, Toolbar, Tooltip, Typography } from '@mui/material'
+import { AppBar, Backdrop, Box, IconButton, Toolbar, Tooltip, Typography } from '@mui/material'
 import React, { lazy, Suspense, useState } from 'react'
 import { orange } from '../../constants/color'
 import {Logout as LogoutIcon,Add as AddIcon, Group as GroupIcon, Menu as MenuIcon, Search as SearchIcon, Notifications as NotificationsIcon} from '@mui/icons-material'
@@ -72,17 +72,17 @@ const Header = () => {
     </Box>
 
     {
-      isSearch && <Suspense fallback={<div>Loading...</div>}>
+      isSearch && <Suspense fallback={<Backdrop open/>}>
         <SearchDialog/>
       </Suspense>
     }
     {
-      isNotification && <Suspense fallback={<div>Loading...</div>}>
+      isNotification && <Suspense fallback={<Backdrop open/>}>
         <NotificationDialog/>
       </Suspense>
     }
     {
-      isNewgroup && <Suspense fallback={<div>Loading...</div>}>
+      isNewgroup && <Suspense fallback={<Backdrop open/>}>
         <NewGroupDialog/>
       </Suspense>
     }
